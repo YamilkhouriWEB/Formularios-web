@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Despiece Cabeza de Circulación Nro.: 1193</title>
+ <!-- El script de la librería-->
+ <script src="html2pdf.bundle.min.js"></script>
+ <!--Nuestro script, que se encarga de crear el PDF usando la librería-->
+ <script src="script.js"></script>
+    <style>
+         
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #06fa2f;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center; /* Alineación al centro */
+        }
+
+        header div {
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        /* Estilos para la tabla principal */
+        
+        table.main-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 2px solid #06fa2f;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #000000;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        
+
+        /* Estilos para la mini tabla */
+        table.mini-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 2px solid #06fa2f;
+        }
+
+        table.mini-table th,
+        table.mini-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        table.mini-table th {
+            background-color: #0a0c0a;
+            color: white;
+        }
+
+     /* Estilos para el campo de carga de imágenes */
+.image-upload {
+    margin-top: 20px;
+}
+
+.image-upload label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#photos {
+    display: none; /* Ocultar el campo de carga real */
+}
+
+.image-preview-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px 10px 0;
+}
+
+.capture-button {
+    padding: 8px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+        @media (max-width: 767px) {
+  table.main-table,
+  table.mini-table {
+    font-size: 14px;
+  }
+  table.main-table td:nth-child(n+2),
+  table.mini-table td:nth-child(n+2) {
+    padding: 8px 12px;
+  }
+  .image-preview {
+    max-width: 100%;
+  }
+  .image-upload label,
+  .image-upload .capture-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .image-upload .image-preview-container {
+    margin-top: 10px;
+  }
+}
+    </style>
+    </head>
+<body>
+
+<header>
+    <!-- Logo de la empresa (reemplaza 'ruta_del_logo' con la ubicación de tu archivo de imagen) -->
+    <img src="https://enerbas.com.ar/images/logoenerbas1.png" alt="Logo de la empresa">
+    
+    <h1>REGISTRO MANTENIMIENTO CABEZA DE CIRCULACIÓN Nro.: 1193</h1>
+    
+    <div>
+        <p style="margin: 0;">RG-41</p>
+        <p style="margin: 0;">Revisión: 1</p>
+    </div>
+</header>
+
+<h2>Especificaciones tecnicas de mantenimiento</h2>
+<!-- Formulario -->
+<form>
+    <form action="procesar_formulario.php" method="post">
+        <form id="formulario" action="procesar_formulario.php" method="post">
+        
+         
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Condición</th>
+                <th>Reemplazo</th>
+                <th>Torneria</th>
+                <th>OBS</th>
+
+                <!-- Otras columnas aquí según tus especificaciones -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas del formulario -->
+            <!-- Primera columna: Item -->
+            <tr>
+                <td>01</td>
+                <!-- Segunda columna: Código -->
+                <td>01-000.01</td>
+                <!-- Tercera columna: Descripción -->
+                <td>Eje con entrada 2</td>
+                <!-- Cuarta columna: Condición -->
+                <td><input type="text" name="condicion_01" placeholder=></td>
+                <!-- Quinta columna: Reemplazo -->
+                <td><input type="text" name="reemplazo_01" placeholder=></td>
+                <!-- Otras celdas de la fila aquí -->
+                <td><input type="text" name="Torneria_01" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>02-000.01</td>
+                <td>Cuerpo medio estriado</td>
+                <td><input type="text" name="condicion_02" placeholder=></td>
+                <td><input type="text" name="reemplazo_02" placeholder=></td>
+                <td><input type="text" name="torneria_02" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>01-000.03</td>
+                <td>Cuerpo superior</td>
+                <td><input type="text" name="condicion_03" placeholder=></td>
+                <td><input type="text" name="reemplazo_03" placeholder=></td>
+                <td><input type="text" name="torneria_03" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>01-000.04</td>
+                <td>Asa de elevacion</td>
+                <td><input type="text" name="condicion_04" placeholder=></td>
+                <td><input type="text" name="reemplazo_04" placeholder=></td>
+                <td><input type="text" name="torneria_04" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>01-000.05</td>
+                <td>Retenida</td>
+                <td><input type="text" name="condicion_05" placeholder=></td>
+                <td><input type="text" name="reemplazo_05" placeholder=></td>
+                <td><input type="text" name="torneria_05" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>01-000.06</td>
+                <td>Reduccion</td>
+                <td><input type="text" name="condicion_06" placeholder=></td>
+                <td><input type="text" name="reemplazo_06" placeholder=></td>
+                <td><input type="text" name="torneria_06" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>01-000.07</td>
+                <td>Cuello de cisne FIG 1502</td>
+                <td><input type="text" name="condicion_07" placeholder=></td>
+                <td><input type="text" name="reemplazo_07" placeholder=></td>
+                <td><input type="text" name="torneria_07" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>01-000.08</td>
+                <td>Bulones de retenida (4)</td>
+                <td><input type="text" name="condicion_08" placeholder=></td>
+                <td><input type="text" name="reemplazo_08" placeholder=></td>
+                <td><input type="text" name="torneria_08" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>01-000.09</td>
+                <td>Caja porta piston</td>
+                <td><input type="text" name="condicion_09" placeholder=></td>
+                <td><input type="text" name="reemplazo_09" placeholder=></td>
+                <td><input type="text" name="torneria_09" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>01-000.10</td>
+                <td>Crapodina</td>
+                <td><input type="text" name="condicion_10" placeholder=></td>
+                <td><input type="text" name="reemplazo_10" placeholder=></td>
+                <td><input type="text" name="torneria_10" placeholder=></td>
+                <td><textarea id="observaciones" name="observaciones" rows="2" required></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+ <!-- Mini tabla -->
+ <table class="mini-table">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Personal</th>
+            <th>Pozo</th>
+            <th>Equipo</th>
+            <th>Metros de profundidad</th>
+            <th>Peso utilizado</th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="date" name="fecha" required></td>
+            <td><input type="text" name="personal" placeholder="Ingrese el nombre"></td>
+            <td><input type="text" name="pozo" placeholder="Ingrese el pozo"></td>
+            <td><input type="text" name="equipo" placeholder="Ingrese el equipo"></td>
+            <td><input type="text" name="Metros_profundidad" placeholder="Ingrese los metros"></td>
+            <td><input type="text" name="Peso_utilizado" placeholder="Ingrese el peso"></td>
+      </tr>
+    </tbody>
+</table>
+
+    <!-- Campo de carga de imágenes múltiples -->
+    <div class="image-upload">
+        <label for="photos">Adjuntar fotos:</label>
+        <input type="file" accept="image/*" multiple name="photos" id="photos">
+        <div class="image-preview-container" id="image-preview-container"></div>
+        <button class="capture-button" type="button" onclick="clearPreview()">Limpiar Vista Previa</button>
+    </div>
+</form>
+
+
+<script>
+    // Función para mostrar la vista previa de las imágenes
+    document.getElementById('photos').addEventListener('change', function(event) {
+        const previewContainer = document.getElementById('image-preview-container');
+        previewContainer.innerHTML = '';
+
+        const files = event.target.files;
+        for (const file of files) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const img = document.createElement('img');
+                img.src = reader.result;
+                img.classList.add('image-preview');
+                previewContainer.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Función para limpiar la vista previa
+    function clearPreview() {
+        const previewContainer = document.getElementById('image-preview-container');
+        previewContainer.innerHTML = '';
+    }
+</script>
+
+<button id="btnCrearPdf">Click aquí</button>
+
+
+</body>
+
+</html>
